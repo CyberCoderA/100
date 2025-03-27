@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette */
+  --color-primary-light: oklch(84.92% 0.0804 81.96);
+  --color-primary-heavy: oklch(78.79% 0.0964 81.8);
+  --color-dark-heavy: oklch(33.29% 0 0);
+  --color-dark-light: oklch(44.7% 0.0066 17.4);
+  --color-white-paste: oklch(88.53% 0 0);
+}
