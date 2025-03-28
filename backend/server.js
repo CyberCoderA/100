@@ -15,4 +15,4 @@ const userRouter = require('./routes/users')
 
 app.use('/users', userRouter)
 
-app.listen(PORT)
+app.listen(process.env.PORT)
