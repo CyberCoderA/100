@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 import TextField from "../components/TextField";
 import "../App.css";
 
@@ -16,7 +17,7 @@ const About = () => {
 
         <ul className=" hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl">
           <li className="p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer">
-            <a href="#">Home</a>
+            <Link to={"/"}>Home</Link>
           </li>
           <li className="p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer">
             <a href="#">Explore</a>
@@ -42,7 +43,7 @@ const About = () => {
           style={{ transition: "transform 0.3s ease, opacity 0.3 ease" }}
         >
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
-            Home
+            <Link to={"/"}>Home</Link>
           </li>
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
             Explore

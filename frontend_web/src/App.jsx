@@ -1,14 +1,13 @@
 import React from "react";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import AppController from "./AppController";
+
 
 function App() {
 
   return (
-    <>
-      <Contact />
-    </>
+    <div>
+      <AppController />
+    </div>
   )
 }
 
