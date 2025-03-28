@@ -15,7 +15,7 @@ const Home = () => {
                 <h1 className=' text-5xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
 
                 <ul className=" hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl">
-                    <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer' >Home</li>
+                    <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold' >Home</li>
                     <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><a href="#">Explore</a></li>
                     <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><Link to={"/about"}>About</Link></li>
                     <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><Link to={"/contact"}>Contact</Link></li>
