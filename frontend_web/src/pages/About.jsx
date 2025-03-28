@@ -23,10 +23,10 @@ const About = () => {
             <a href="#">Explore</a>
           </li>
           <li className="p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold">
-            <a href="#">About</a>
+            About
           </li>
           <li className="p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer">
-            <a href="#">Contact</a>
+            <Link to={"/contact"}>Contact</Link>
           </li>
         </ul>
 
@@ -42,7 +42,7 @@ const About = () => {
           }`}
           style={{ transition: "transform 0.3s ease, opacity 0.3 ease" }}
         >
-          <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
+          <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer font-bold">
             <Link to={"/"}>Home</Link>
           </li>
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
@@ -52,7 +52,7 @@ const About = () => {
             About
           </li>
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
-            Contact
+            <Link to={"/contact"}>Contact</Link>
           </li>
           {/* <li className='list-none w-full flex justify-center pb-5'><TextField placeholder="Search..." /></li> */}
         </div>
