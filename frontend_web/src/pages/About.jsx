@@ -32,7 +32,7 @@ const About = () => {
 
         <TextField placeholder="Search..." />
         <Bars3Icon
-          className="mr-10 xl:hidden size-15 cursor-pointer"
+          className="xl:hidden size-15 cursor-pointer"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
 
@@ -42,13 +42,13 @@ const About = () => {
           }`}
           style={{ transition: "transform 0.3s ease, opacity 0.3 ease" }}
         >
-          <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer font-bold">
+          <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
             <Link to={"/"}>Home</Link>
           </li>
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
             Explore
           </li>
-          <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
+          <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer font-bold">
             About
           </li>
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
@@ -63,7 +63,7 @@ const About = () => {
           <h1 className="text-white text-3xl font-bold italic mb-10 xl:text-7xl">
             About 100
           </h1>
-          <p className="text-gray-200 mb-30 w-150 xl:text-4xl xl:w-230">
+          <p className="text-gray-200 mb-30 w-80 xl:text-4xl xl:w-230">
           100 was created as a passion project, it is a dedication for someone dear to me. If anyone ever stumbles upon this site, feel free to create an account and contribute to the collection.
           </p>
         </div>
