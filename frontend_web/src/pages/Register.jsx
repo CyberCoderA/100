@@ -5,7 +5,7 @@ import TextField from '../components/TextField';
 import InputField from '../components/InputField';
 import '../App.css';
 
-const Login = () => {
+const Register = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
@@ -36,23 +36,24 @@ const Login = () => {
 
             {/* Body */}
             <div className='background-img flex justify-center items-center'>
-                {/* Login Modal */}
-                <div className="flex flex-col justify-between xl:justify-around p-5 w-70 h-100 bg-white rounded-3xl border-1 xl:w-180 xl:h-180">
-                    <h1 className='text-dark-heavy self-center font-bold text-2xl xl:text-6xl'>USER LOGIN</h1>
-                    <div>
-                       <InputField title="Email Address" placeholder="someone@gmail.com" /> 
-                       <br/>
-                       <InputField title="Password" placeholder="12xeP3aq0489" /> 
-                       <p className="text-dark-light italic text-end mt-2 hover:cursor-pointer xl:text-2xl">Forgot Password?</p>
+                {/* Register Modal */}
+                <div className="bg-white p-5 w-70 h-110 rounded-2xl md:h-150 md:w-250 xl:h-200 xl:w-350 xl:rounded-4xl">
+                    <div><h1 className='text-xl text-center font-bold text-dark-heavy xl:text-5xl'>USER REGISTRATION</h1></div>
+                    <div className='mt-10 gap-20 flex flex-row'>
+                        <div className='w-1/2 flex flex-col gap-10'>
+                            <InputField title="Full Name" placeholder="Jesus H. Roosevelt" />
+                        </div>
+                        <div className='w-1/2 flex flex-col gap-10'>
+                            <InputField title="Email Address" placeholder="someone@gmail.com" />
+                            <InputField title="Password" placeholder="12xeP3aq0489" />
+                            <InputField title="Confirm Password" placeholder="12xeP3aq0489" />
+                        </div>
                     </div>
-                    <div>
-                        <button className='w-full h-10 text-dark-heavy font-bold bg-primary-light border-2 rounded-xl hover:cursor-pointer xl:text-2xl xl:h-16 xl:border-3'>LOGIN</button>
-                        <Link to={'/register'}><p className=" text-dark-light italic text-center mt-2 hover:cursor-pointer xl:text-2xl xl:mt-5">No Account? Create one!</p></Link>
-                    </div>
+                    <div></div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Login;
+export default Register;
