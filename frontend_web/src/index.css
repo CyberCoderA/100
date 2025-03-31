@@ -8,3 +8,9 @@
   --color-dark-light: oklch(44.7% 0.0066 17.4);
   --color-white-paste: oklch(88.53% 0 0);
 }
+
+@layer components {
+  .link-heavy {
+    @apply hover:font-bold transition-all cursor-pointer;
+  }
+}
