@@ -41,12 +41,12 @@ const Register = () => {
                 <div className="flex flex-col justify-between bg-white p-5 w-70 h-110 rounded-2xl overflow-y-scroll overflow-x-hidden md:h-150 md:w-250 xl:h-200 xl:w-350 xl:rounded-4xl xl:overflow-y-hidden">
                     <div><h1 className='text-xl text-center font-bold text-dark-heavy xl:text-5xl'>USER REGISTRATION</h1></div>
                     <div className='mt-10 flex flex-col gap-5 md:flex-row md:gap-20'>
-                        <div className='w-1/2 flex flex-col gap-10'>
+                        <div className='w-1/2 flex flex-col gap-10 sm:w-full'>
                             <InputField title="Full Name" placeholder="Jesus H. Roosevelt" />
                             <DatePicker title="Birth Date" />
                             <div>
                                 <h1 className='text-dark-heavy font-bold text-xl xl:text-4xl'>Sex</h1>
-                                <div className='flex items-center mt-3 gap-20'>
+                                <div className='flex items-center flex-col mt-3 gap-20 sm:gap-5 xl:flex-row'>
                                     <div className='flex items-center gap-2'>
                                         <input type="radio" name="sex" id="male" className='size-6'/>
                                         <label htmlFor="male" className='text-dark-heavy text-2xl'>Male</label>
@@ -64,13 +64,13 @@ const Register = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='w-1/2 flex flex-col gap-10'>
+                        <div className='w-1/2 flex flex-col gap-10 sm:w-full sm:mt-10'>
                             <InputField title="Email Address" placeholder="someone@gmail.com" />
                             <InputField title="Password" placeholder="12xeP3aq0489" />
                             <InputField title="Confirm Password" placeholder="12xeP3aq0489" />
                         </div>
                     </div>
-                    <div>
+                    <div className='sm: mt-10'>
                         <button className='w-full h-10 text-dark-heavy font-bold bg-primary-light border-2 rounded-xl hover:cursor-pointer xl:text-2xl xl:h-16 xl:border-3'>CREATE ACCOUNT</button>
                         <Link to={'/login'}><p className=" text-dark-light italic text-center mt-2 link-heavy xl:text-2xl xl:mt-5">Already have an account? Login!</p></Link>
                     </div>
