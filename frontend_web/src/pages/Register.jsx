@@ -64,13 +64,13 @@ const Register = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='w-1/2 flex flex-col gap-10 sm:w-full sm:mt-10'>
+                        <div className='w-1/2 flex flex-col gap-10 sm:w-full'>
                             <InputField title="Email Address" placeholder="someone@gmail.com" />
                             <InputField title="Password" placeholder="12xeP3aq0489" />
                             <InputField title="Confirm Password" placeholder="12xeP3aq0489" />
                         </div>
                     </div>
-                    <div className='sm: mt-10'>
+                    <div className='sm:mt-10'>
                         <button className='w-full h-10 text-dark-heavy font-bold bg-primary-light border-2 rounded-xl hover:cursor-pointer xl:text-2xl xl:h-16 xl:border-3'>CREATE ACCOUNT</button>
                         <Link to={'/login'}><p className=" text-dark-light italic text-center mt-2 link-heavy xl:text-2xl xl:mt-5">Already have an account? Login!</p></Link>
                     </div>
