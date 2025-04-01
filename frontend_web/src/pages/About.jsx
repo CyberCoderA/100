@@ -20,7 +20,7 @@ const About = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li className="p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer">
-            <a href="#">Explore</a>
+            <Link to={"/explore"}>Explore</Link>
           </li>
           <li className="p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold">
             About
@@ -46,7 +46,7 @@ const About = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer">
-            Explore
+            <Link to={"/explore"}>Explore</Link>
           </li>
           <li className="list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer font-bold">
             About

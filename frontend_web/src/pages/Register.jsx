@@ -40,25 +40,27 @@ const Register = () => {
                 {/* Register Modal */}
                 <div className='flex flex-col bg-white h-3/4 w-3/4 rounded-2xl justify-around overflow-y-scroll xl:overflow-y-hidden'>
                     <h1 className='text-center text-xl text-dark-heavy font-bold xl:text-6xl'>USER REGISTRATION</h1>
-                    <div className='flex flex-col p-3 gap-5 xl:flex-row xl:justify-between xl:gap-10'>
+                    <div className='flex flex-col p-5 gap-5 xl:flex-row xl:justify-between xl:gap-10'>
                         <div className="flex flex-col gap-2 w-full xl:gap-10">
                             <div className='flex flex-col gap-2 xl:gap-10'>
                                 <InputField title="Full Name" placeholder="Jesus H. Roosevelt" />
                                 <DatePicker title="Birth Date" />
                             </div>
-                            <div>
+                            <div className='w-full'>
                                 <h1 className='text-dark-heavy font-bold text-xl xl:text-4xl'>Sex</h1>
-                                <div className='flex items-center gap-2'>
-                                    <input type="radio" name="sex" id="male" className='size-4'/>
-                                    <label htmlFor="male" className='text-dark-heavy text-xl'>Male</label>
-                                </div>
-                                <div className='flex items-center gap-2'>
-                                    <input type="radio" name="sex" id="female" className='size-4'/>
-                                    <label htmlFor="female" className='text-dark-heavy text-xl'>Female</label>
-                                </div>
-                                <div className='flex items-center gap-2'>
-                                    <input type="radio" name="sex" id="neutral" className='size-4'/>
-                                    <label htmlFor="neutral" className='text-dark-heavy text-xl'>Prefer not to say</label>
+                                <div className='flex flex-col xl:flex-row xl:gap-10 xl:mt-5'>
+                                    <div className='flex items-center gap-2'>
+                                        <input type="radio" name="sex" id="male" className='size-4'/>
+                                        <label htmlFor="male" className='text-dark-heavy text-xl'>Male</label>
+                                    </div>
+                                    <div className='flex items-center gap-2'>
+                                        <input type="radio" name="sex" id="female" className='size-4'/>
+                                        <label htmlFor="female" className='text-dark-heavy text-xl'>Female</label>
+                                    </div>
+                                    <div className='flex items-center gap-2'>
+                                        <input type="radio" name="sex" id="neutral" className='size-4'/>
+                                        <label htmlFor="neutral" className='text-dark-heavy text-xl'>Prefer not to say</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
