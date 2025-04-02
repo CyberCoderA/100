@@ -17,7 +17,7 @@ const Register = () => {
 
                 <ul className=" hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl">
                     <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><Link to={"/"}>Home</Link></li>
-                    <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><a href="#">Explore</a></li>
+                    <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><Link to={"/explore"}>Explore</Link></li>
                     <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><Link to={"/about"}>About</Link></li>
                     <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'><Link to={"/contact"}>Contact</Link></li>
                 </ul>
@@ -28,7 +28,7 @@ const Register = () => {
                 <div className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "hidden"}`}
                     style={{ transition: "transform 0.3s ease, opacity 0.3 ease" }}>
                     <li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'><Link to={"/"}>Home</Link></li>
-                    <li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>Explore</li>
+                    <li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'><Link to={"/explore"}>Explore</Link></li>
                     <li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'><Link to={"/about"}>About</Link></li>
                     <li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'><Link to={"/contact"}>Contact</Link></li>
                     {/* <li className='list-none w-full flex justify-center pb-5'><TextField placeholder="Search..." /></li> */}
@@ -38,9 +38,9 @@ const Register = () => {
             {/* Body */}
             <div className='background-img flex justify-center items-center'>
                 {/* Register Modal */}
-                <div className='flex flex-col bg-white h-3/4 w-3/4 rounded-2xl justify-around overflow-y-scroll xl:overflow-y-hidden'>
-                    <h1 className='text-center text-xl text-dark-heavy font-bold xl:text-6xl'>USER REGISTRATION</h1>
-                    <div className='flex flex-col p-5 gap-5 xl:flex-row xl:justify-between xl:gap-10'>
+                <div className='flex flex-col bg-white h-120 w-80 rounded-2xl justify-around overflow-y-scroll md:h-270 md:w-230 md:overflow-y-hidden xl:overflow-y-hidden xl:h-3/4 xl:w-3/4'>
+                    <h1 className='text-center text-xl text-dark-heavy font-bold md:text-3xl xl:text-6xl'>USER REGISTRATION</h1>
+                    <div className='flex flex-col p-5 gap-5 md:gap-20 xl:flex-row xl:justify-between xl:gap-10'>
                         <div className="flex flex-col gap-2 w-full xl:gap-10">
                             <div className='flex flex-col gap-2 xl:gap-10'>
                                 <InputField title="Full Name" placeholder="Jesus H. Roosevelt" />
