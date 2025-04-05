@@ -1,7 +1,6 @@
 const User = require('../models/User');
 
 const getUser = async(req, res) => {
-
     try {
         const user = await User.findById(req.params.user_id).select('-user_password')  
         if(!user) {
