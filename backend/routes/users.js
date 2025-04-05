@@ -1,11 +1,8 @@
 const express = require('express')
-const app = express()
 const router = express.Router()
+const { getUser } = require('../controllers/UserController');
 
+// GET user
+router.get("/:user_id", getUser);
 
-router.get("/", (req, res) => {
-    console.log('Here')
-    res.send('Hi')
-})
-
-module.exports = router
+module.exports = router;
