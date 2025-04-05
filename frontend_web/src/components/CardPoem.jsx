@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeartIcon,  } from '@heroicons/react/24/solid';
+import { HeartIcon } from '@heroicons/react/24/solid';
 import { BookmarkIcon } from '@heroicons/react/24/outline';
 
 
@@ -14,10 +14,10 @@ const CardPoem = () => {
             </div>
             <div className='flex self-end justify-between gap-3'>
               <div className='flex flex-row items-center'>
-                <HeartIcon className='size-7 text-dark-heavy xl:size-10'/>
+                <HeartIcon className='size-7 text-dark-heavy xl:size-10 hover:cursor-pointer hover:text-dark-light hover:transition delay-100 duration-300 ease-in-out'/>
                 <p className='text-xl text-dark-heavy xl:text-2xl'>10</p>
               </div>
-              <BookmarkIcon className='size-7 text-dark-heavy xl:size-10'/>
+              <BookmarkIcon className='size-7 text-dark-heavy xl:size-10 hover:cursor-pointer hover:text-dark-light hover:transition delay-100 duration-300 ease-in-out'/>
             </div>
         </div>
     </div>
