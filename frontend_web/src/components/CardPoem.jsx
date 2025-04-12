@@ -1,7 +1,5 @@
 import React from 'react';
 import { HeartIcon } from '@heroicons/react/24/solid';
-import { BookmarkIcon } from '@heroicons/react/24/outline';
-
 
 const CardPoem = () => {
   return (
@@ -17,7 +15,9 @@ const CardPoem = () => {
                 <HeartIcon className='size-7 text-dark-heavy xl:size-10 hover:cursor-pointer hover:text-dark-light hover:transition delay-100 duration-300 ease-in-out'/>
                 <p className='text-xl text-dark-heavy xl:text-2xl'>10</p>
               </div>
-              <BookmarkIcon className='size-7 text-dark-heavy xl:size-10 hover:cursor-pointer hover:text-dark-light hover:transition delay-100 duration-300 ease-in-out'/>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-7 text-dark-heavy xl:size-10 hover:cursor-pointer hover:text-dark-light hover:transition delay-100 duration-300 ease-in-out">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+              </svg>
             </div>
         </div>
     </div>

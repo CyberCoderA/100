@@ -4,6 +4,7 @@ import { Bars3Icon } from '@heroicons/react/24/solid';
 import TextField from '../components/TextField';
 import InputField from '../components/InputField';
 import '../App.css';
+import PasswordField from '../components/PasswordField';
 
 const Login = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,12 +43,12 @@ const Login = () => {
                     <div>
                        <InputField title="Email Address" placeholder="someone@gmail.com" /> 
                        <br/>
-                       <InputField title="Password" placeholder="12xeP3aq0489" /> 
+                       <PasswordField title="Password" placeholder="12xeP3aq0489" /> 
                        <p className="text-dark-light italic text-end mt-2 hover:text-dark-heavy transition-all cursor-pointer xl:text-2xl">Forgot Password?</p>
                     </div>
                     <div>
                         <button className='w-full h-10 text-dark-heavy font-bold bg-primary-light border-2 rounded-xl hover:cursor-pointer hover:bg-primary-heavy
-                         xl:text-2xl xl:h-16 xl:border-3'>LOGIN</button>
+                         xl:text-2xl xl:h-16 xl:border-3 hover:transition delay-100 duration-300 ease-in-out'>LOGIN</button>
                         <Link to={'/register'}><p className=" text-dark-light italic text-center mt-2 link-heavy xl:text-2xl xl:mt-5">No Account? Create one!</p></Link>
                     </div>
                 </div>
