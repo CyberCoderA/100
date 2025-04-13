@@ -4,7 +4,8 @@ const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 
-const userRouter = require('./routes/users')
+const userRouter = require('./routes/users');
+const poemRouter = require('./routes/poems');
 
 const app = express()
 
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/users', userRouter)
+app.use('/poems', poemRouter)
 
 // Connect to database
 mongoose.connect(process.env.MONGODB_URI)
