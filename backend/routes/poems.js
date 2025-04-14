@@ -1,7 +1,7 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
-const { getAllPoems, getPoem } = require('../controllers/PoemController')
+const { getAllPoems, getPoem } = require('../controllers/PoemController');
 
 // GET poem
 router.get("/", getAllPoems);

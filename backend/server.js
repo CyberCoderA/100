@@ -1,25 +1,25 @@
-require('dotenv').config()
+require('dotenv').config();
 
-const cors = require('cors')
-const express = require('express')
-const mongoose = require('mongoose')
+const cors = require('cors');
+const express = require('express');
+const mongoose = require('mongoose');
 
 const userRouter = require('./routes/users');
 const poemRouter = require('./routes/poems');
 
-const app = express()
+const app = express();
 
 // Middleware
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
+app.use(cors());
 
 app.use((req, res, next) => {
-    console.log(req.path, req.method)
-    next()
+    console.log(req.path, req.method);
+    next();
 })
 
-app.use('/users', userRouter)
-app.use('/poems', poemRouter)
+app.use('/users', userRouter);
+app.use('/poems', poemRouter);
 
 // Connect to database
 mongoose.connect(process.env.MONGODB_URI)

@@ -27,4 +27,4 @@ const getPoem = async(req, res) => {
 module.exports = {
     getAllPoems,
     getPoem
-};
+}
