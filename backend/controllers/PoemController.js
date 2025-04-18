@@ -2,14 +2,38 @@ const Poem = require("../models/Poem");
 
 const getAllPoems = async(req, res) => {
     try {
-        const poemList = await Poem.find({});
-        if(!poemList) {
-            return res.status(404).json({message: "No poems on the database!"});
+        const { query } = req.query;
+
+        // Construct the aggregation pipeline
+        const pipeline = [];
+
+        // Add Atlas Search stage for fuzzy multi-field search
+        if(query) {
+            pipeline.push({
+                $search: {
+                    index: search, 
+                    compound: {
+                        should: [
+                          {
+                            text: {
+                              query: query,
+                              path: 'title',
+                              fuzzy: { maxEdits: 2 }
+                            }
+                          }
+                        ],
+                        minimumShouldMatch: 1
+                      }
+                }
+            })
         }
 
-        return poemList;
+         // Execute the aggregation pipeline
+         const poems = await Poem.aggregate(pipeline);
+
+         res.json(poems);
     } catch(error) {
-        res.status(500).json({message: error});
+        res.status(500).json({message: 'Server Error'});
     }
 }
 
