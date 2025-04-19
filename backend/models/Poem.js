@@ -11,6 +11,6 @@ const poemSchema = new Schema({
 });
 
 // indexing by title
-poemSchema.index({title: 'search'});
+poemSchema.index({title: 'text'});
 
 module.exports = mongoose.model('Poem', poemSchema);
