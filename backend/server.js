@@ -22,7 +22,7 @@ app.use('/users', userRouter);
 app.use('/poems', poemRouter);
 
 // Connect to database
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         app.listen(process.env.PORT, () => {
             console.log("Server is running on PORT", process.env.PORT);
