@@ -45,7 +45,7 @@ const getPoem = async (req, res) => {
 
     res.status(200).json(poem);
   } catch (error) {
-    res.status(500).json({ message: error });
+    res.status(500).json({ message: "Server Error" });
   }
 };
 

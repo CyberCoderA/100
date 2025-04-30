@@ -1,5 +1,3 @@
-import router from './routes/users';
-
 require('dotenv').config();
 
 const cors = require('cors');
@@ -14,7 +12,6 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
-app.use(router);
 
 app.use((req, res, next) => {
     console.log(req.path, req.method);
@@ -34,5 +31,3 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
     .catch((err) => {
         console.log(err);
     })
-
-export default app;
