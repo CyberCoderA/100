@@ -14,7 +14,7 @@ const Navbar = ({ activeRoute }) => {
     };
 
     function formatRouteToText(route) {
-        return route.replace('/', "").charAt(0).toUpperCase() + i.substring(2);
+        return route.replace('/', "").charAt(0).toUpperCase() + i.substring(2)
     }
 
     function renderRoutes() {
