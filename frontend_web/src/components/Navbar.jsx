@@ -17,11 +17,9 @@ const Navbar = ({ activeRoute }) => {
         siteRoutes.map((i) => {
             console.log(i.replace('/', "").charAt(0).toUpperCase() + i.substring(2))
             if (i == activeRoute) {
-                return (
-                  <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
-                );
+                <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
             } else {
-                return <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
+                <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
             }
         })
     }
