@@ -16,11 +16,13 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         siteRoutes.map((i) => {
             console.log(i.replace('/', "").charAt(0).toUpperCase() + i.substring(2))
-            if (i == activeRoute) {
-                <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
-            } else {
-                <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
-            }
+            // if (i == activeRoute) {
+            //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
+            // } else {
+            //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
+            // }
+
+            <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
         })
     }
 
@@ -28,7 +30,7 @@ const Navbar = ({ activeRoute }) => {
         <div className="bg-primary-heavy p-5 h-30 flex items-center justify-between drop-shadow-md">
             <h1 className=' text-5xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
 
-            <ul className=" hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl">
+            <ul className="hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl">
                 {renderRoutes()}
             </ul>
 
