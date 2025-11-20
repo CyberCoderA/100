@@ -14,7 +14,7 @@ const Navbar = ({ activeRoute }) => {
     };
 
     function formatRouteToText(route) {
-        return route.replace('/', "").charAt(0).toUpperCase() + i.substring(2)
+        return route.replace('/', "").charAt(0).toUpperCase() + route.substring(2);
     }
 
     function renderRoutes() {
@@ -26,7 +26,7 @@ const Navbar = ({ activeRoute }) => {
             //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
             // }
 
-             <h1>{formatRouteToText(i)}</h1>
+            <h1>{formatRouteToText(i)}</h1>
         })
     }
 
