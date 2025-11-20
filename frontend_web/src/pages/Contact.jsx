@@ -36,7 +36,7 @@ const Contact = () => {
             </div>
 
             <div className='flex flex-col justify-center items-center h-full gap-20 m-10 md:flex-row'>
-                <div className="rounded-full h-60 w-60 bg-white-paste md:h-100 md:w-100"></div>
+                <div className="bg-[url('https://drive.google.com/file/d/1MzBOtuhCsv5ECKnTKq2hDPVpano3QPj1/view?usp=drive_link')] rounded-full h-60 w-60 bg-white-paste md:h-100 md:w-100"></div>
                 <div className='flex flex-col md:mt-10'>
                     <h1 className="text-3xl xl:text-7xl text-dark-heavy font-bold">Adrian Pueblo</h1>
                     <p className='text-dark-heavy mb-30 w-80 mt-5 xl:text-4xl xl:w-230'>
