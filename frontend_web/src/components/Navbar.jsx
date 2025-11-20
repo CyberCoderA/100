@@ -6,7 +6,7 @@ import '../App.css';
 
 const Navbar = ({ activeRoute }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const siteRoutes = ["/home", "/explore", "/about", "/contact"];
+    const siteRoutes = ["/", "/explore", "/about", "/contact"];
 
     function handleMenuFunction() {
         return isMenuOpen ? <XMarkIcon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} /> :
@@ -19,7 +19,7 @@ const Navbar = ({ activeRoute }) => {
 
     function renderRoutes() {
         return siteRoutes.map((i) => {
-            console.log(formatRouteToText(i));
+            console.log(activeRoute);
             if (i == activeRoute) {
                 return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {

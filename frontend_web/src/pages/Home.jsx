@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div className="h-screen flex flex-col">
-            <Navbar activeRoute="/home"/>
+            <Navbar activeRoute="/"/>
 
             <div className='background-img flex justify-center items-center'>
                 <div className=' flex flex-col items-center text-center'>
