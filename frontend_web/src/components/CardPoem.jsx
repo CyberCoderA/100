@@ -7,8 +7,8 @@ const CardPoem = ({ avatar, title, writer, favoriteCount }) => {
         <div className='flex flex-row gap-3'>
             <div className="rounded-full h-25 w-25 bg-white-paste xl:h-50 xl:w-50"></div>
             <div className='xl:mt-5'>
-                <p className="xl:text-2xl text-dark-heavy">{writer}</p>
-                <h1 className="text-2xl xl:text-3xl text-dark-heavy font-bold">{title}</h1>
+                <p className="w-full xl:text-2xl text-dark-heavy">{writer}</p>
+                <h1 className="w-full text-2xl xl:text-3xl text-dark-heavy font-bold">{title}</h1>
             </div>
             <div className='flex self-end justify-between gap-3'>
               <div className='flex flex-row items-center'>
