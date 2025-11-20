@@ -7,10 +7,10 @@ import '../App.css';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    handleMenuFunction = () => {
-        return isMenuOpen ? <XMarkIcon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} /> :
-            <Bars3Icon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />;
-    };
+    // handleMenuFunction = () => {
+    //     return isMenuOpen ? <XMarkIcon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} /> :
+    //         <Bars3Icon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />;
+    // };
 
     return (
         <div className="bg-primary-heavy p-5 h-30 flex items-center justify-between drop-shadow-md">
@@ -24,7 +24,7 @@ const Navbar = () => {
             </ul>
 
             <TextField placeholder="Search..." />
-            {handleMenuFunction()}
+            {/* {handleMenuFunction()} */}
 
             {/* Navigation drawer */}
             <div className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "hidden"}`}
