@@ -18,7 +18,7 @@ const Navbar = ({ activeRoute }) => {
     }
 
     function renderRoutes() {
-        siteRoutes.map((i) => {
+        return siteRoutes.map((i) => {
             console.log(formatRouteToText(i));
             if (i == activeRoute) {
                 <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>
