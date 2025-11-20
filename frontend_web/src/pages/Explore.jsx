@@ -14,7 +14,7 @@ const Explore = () => {
             <div className='flex flex-col gap-5 p-5'>
                 <h1 className="text-3xl xl:text-7xl text-dark-heavy font-bold mt-5 mb-5">Trending Poems</h1>
                 <div className=''>
-                    <CardPoem />
+                    <CardPoem avatar="blank" title="The Girl" writer="Adrian S. Pueblo" />
                 </div>
             </div>
         </div>

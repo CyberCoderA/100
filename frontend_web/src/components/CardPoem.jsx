@@ -1,7 +1,7 @@
 import React from 'react';
 import { HeartIcon } from '@heroicons/react/24/solid';
 
-const CardPoem = () => {
+const CardPoem = ({ avatar, title, writer }) => {
   return (
     <div className='flex flex-col justify-center w-84 h-40 p-2 bg-white rounded-2xl border-2 xl:border-3 xl:w-140 xl:h-60 xl:p-5'>
         <div className='flex flex-row gap-3'>

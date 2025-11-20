@@ -29,9 +29,9 @@ const Navbar = ({ activeRoute }) => {
 
     return (
         <div className="bg-primary-heavy p-5 h-30 flex items-center justify-between drop-shadow-md">
-            <h1 className=' text-5xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
+            <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
 
-            <ul className="hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl">
+            <ul className="hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl h-20">
                 {renderRoutes()}
             </ul>
 
