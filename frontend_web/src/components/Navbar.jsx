@@ -13,11 +13,20 @@ const Navbar = ({ activeRoute }) => {
             <Bars3Icon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />;
     };
 
+    function formatRouteToText(route) {
+        return route.replace('/', "").charAt(0).toUpperCase() + i.substring(2);
+    }
+
     function renderRoutes() {
         siteRoutes.map((i) => {
-            console.log(i.replace('/', "").charAt(0).toUpperCase() + i.substring(2))
+            console.log(i.replace('/', "").charAt(0).toUpperCase() + i.substring(2));
+            // if (i == activeRoute) {
+            //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
+            // } else {
+            //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
+            // }
 
-            <h1>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}</h1>
+             <h1>{formatRouteToText(i)}</h1>
         })
     }
 
