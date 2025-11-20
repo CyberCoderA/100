@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import TextField from '../components/TextField';
 import '../App.css';
 
-const Navbar = (setIsMenuOpen, isMenuOpen) => {
+const Navbar = ({setIsMenuOpen, isMenuOpen}) => {
     <div className="bg-primary-heavy p-5 h-30 flex items-center justify-between drop-shadow-md">
         <h1 className=' text-5xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
 
