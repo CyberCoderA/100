@@ -18,10 +18,10 @@ const Navbar = ({ activeRoute }) => {
             console.log(i.replace('/', "").charAt(0).toUpperCase() + i.substring(2))
             if (i == activeRoute) {
                 return (
-                  <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(1)}!</li></Link>
+                  <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
                 );
             } else {
-                return <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(1)}!</li>
+                return <Link to={i}><div className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</div></Link>
             }
         })
     }
