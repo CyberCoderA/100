@@ -5,6 +5,11 @@ import TextField from '../components/TextField';
 import '../App.css';
 
 const Navbar = ({setIsMenuOpen, isMenuOpen}) => {
+    handleMenuFunction = () => {
+        return isMenuOpen ? <XMarkIcon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)}/> :
+        <Bars3Icon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />;
+    };
+
     <div className="bg-primary-heavy p-5 h-30 flex items-center justify-between drop-shadow-md">
         <h1 className=' text-5xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
 
@@ -28,11 +33,6 @@ const Navbar = ({setIsMenuOpen, isMenuOpen}) => {
             <li className='list-none w-full flex justify-center pb-5'><TextField placeholder="Search..." /></li>
         </div>
     </div>
-
-    handleMenuFunction = () => {
-        return isMenuOpen ? <XMarkIcon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)}/> :
-        <Bars3Icon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />;
-    };
 };
 
 export default Navbar;
