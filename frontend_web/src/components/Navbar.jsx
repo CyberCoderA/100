@@ -4,7 +4,9 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import TextField from '../components/TextField';
 import '../App.css';
 
-const Navbar = ({ setIsMenuOpen, isMenuOpen }) => {
+const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     handleMenuFunction = () => {
         return isMenuOpen ? <XMarkIcon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} /> :
             <Bars3Icon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />;

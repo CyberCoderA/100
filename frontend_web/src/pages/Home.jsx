@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import Navbar from '../components/Navbar';
 
 const Home = () => {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     return (
         <div className="h-screen flex flex-col">
-            <Navbar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen}/>
+            <Navbar/>
 
             <div className='background-img flex justify-center items-center'>
                 <div className=' flex flex-col items-center text-center'>
