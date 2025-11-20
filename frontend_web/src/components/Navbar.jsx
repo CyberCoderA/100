@@ -14,14 +14,12 @@ const Navbar = ({ activeRoute }) => {
     };
 
     function formatRouteToText(route) {
-        return route.replace('/', "").charAt(0).toUpperCase() + route.substring(2);
+        return route == "/" ? "Home" : route.replace('/', "").charAt(0).toUpperCase() + route.substring(2);
     }
 
     function renderRoutes() {
         return siteRoutes.map((i) => {
-            if (i == activeRoute && i == "/") {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>Home</li></Link>);
-            } else if (i == activeRoute){
+            if (i == activeRout) {
                 return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {
                 return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{formatRouteToText(i)}</li></Link>);

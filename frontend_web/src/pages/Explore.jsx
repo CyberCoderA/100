@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Bars3Icon } from '@heroicons/react/24/solid';
-import TextField from '../components/TextField';
 import '../App.css';
 import CardPoem from '../components/CardPoem';
 import Navbar from '../components/Navbar';
