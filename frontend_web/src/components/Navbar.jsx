@@ -7,7 +7,7 @@ import '../App.css';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    handleMenuFunction = () => {
+    function handleMenuFunction {
         return isMenuOpen ? <XMarkIcon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} /> :
             <Bars3Icon className='xl:hidden size-15 cursor-pointer' onClick={() => setIsMenuOpen(!isMenuOpen)} />;
     };
