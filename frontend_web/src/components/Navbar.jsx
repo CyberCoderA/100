@@ -20,9 +20,9 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         return siteRoutes.map((i) => {
             if (i == activeRoute) {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer  xl:text-3xl font-bold'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer  xl:text-4xl font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-4xl cursor-pointer'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-3xl cursor-pointer'>{formatRouteToText(i)}</li></Link>);
             }
         })
     }

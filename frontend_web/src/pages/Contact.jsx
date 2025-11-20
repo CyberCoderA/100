@@ -1,7 +1,4 @@
 import React from 'react';
-import { Bars3Icon } from '@heroicons/react/24/solid';
-import { Link } from "react-router-dom";
-import TextField from '../components/TextField';
 import '../App.css'
 import Navbar from '../components/Navbar';
 
