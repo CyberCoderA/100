@@ -15,13 +15,13 @@ const Navbar = ({ activeRoute }) => {
 
     function renderRoutes() {
         siteRoutes.map((i) => {
-            console.log(i.replace('/', "").charAt(0).toUpperCase() + i.substring(1))
+            console.log(i.replace('/', "").charAt(0).toUpperCase() + i.substring(2))
             if (i == activeRoute) {
                 return (
                   <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(1)}!</li></Link>
                 );
             } else {
-                return <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(1)}!</li></Link>
+                return <li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(1)}!</li>
             }
         })
     }
