@@ -28,7 +28,7 @@ const Navbar = ({ activeRoute }) => {
     }
 
     return (
-        <div className="bg-primary-heavy p-5 h-30 flex items-center justify-between drop-shadow-md">
+        <div className="bg-primary-heavy p-5 h-40 flex items-center justify-between drop-shadow-md">
             <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer xl:text-6xl'>100</h1>
 
             <ul className="hidden xl:flex flex-row items-center gap-8 text-dark-heavy text-2xl h-20">
