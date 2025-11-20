@@ -20,16 +20,16 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         return siteRoutes.map((i) => {
             if (i == activeRoute) {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer  xl:text-xl font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-xl cursor-pointer'>{formatRouteToText(i)}</li></Link>);
             }
         })
     }
 
     return (
         <div className="bg-primary-heavy p-5 h-30 flex items-center justify-between drop-shadow-md">
-            <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
+            <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer xl: text-2xl'>100</h1>
 
             <ul className="hidden xl:flex flex-row items-center gap-8 text-dark-heavy text-2xl h-20">
                 {renderRoutes()}
