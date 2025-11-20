@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import TextField from '../components/TextField';
 import '../App.css';
 
-const Navbar = ({ activeRoute }) => {
+const Navbar = ({ }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const siteRoutes = ["/home", "/explore", "/about", "/contact"];
 
@@ -20,11 +20,9 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         return siteRoutes.map((i) => {
             console.log(formatRouteToText(i));
-            if (i == activeRoute) {
+            return (
                 <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>
-            } else {
-                <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{formatRouteToText(i)}</li></Link>
-            }
+            );
         })
     }
 
