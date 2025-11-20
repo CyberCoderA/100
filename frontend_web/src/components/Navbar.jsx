@@ -22,7 +22,7 @@ const Navbar = ({ activeRoute }) => {
             //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
             // }
 
-            <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
+            <h1>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}</h1>
         })
     }
 
