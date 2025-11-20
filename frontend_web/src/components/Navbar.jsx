@@ -24,7 +24,7 @@ const Navbar = () => {
             </ul>
 
             <TextField placeholder="Search..." />
-            {handleMenuFunction}
+            {handleMenuFunction()}
 
             {/* Navigation drawer */}
             <div className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "hidden"}`}
