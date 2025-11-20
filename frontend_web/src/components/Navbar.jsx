@@ -19,8 +19,9 @@ const Navbar = ({ activeRoute }) => {
 
     function renderRoutes() {
         return siteRoutes.map((i) => {
-            console.log(activeRoute);
-            if (i == activeRoute) {
+            if (i == activeRoute && i == "/") {
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>Home</li></Link>);
+            } else if (i == activeRoute){
                 return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {
                 return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{formatRouteToText(i)}</li></Link>);
