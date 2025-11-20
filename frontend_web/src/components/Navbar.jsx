@@ -20,11 +20,11 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         siteRoutes.map((i) => {
             console.log(formatRouteToText(i));
-            // if (i == activeRoute) {
-            //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
-            // } else {
-            //     <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{i.replace('/', "").charAt(0).toUpperCase() + i.substring(2)}!</li></Link>
-            // }
+            if (i == activeRoute) {
+                <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>
+            } else {
+                <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{formatRouteToText(i)}</li></Link>
+            }
         })
     }
 
@@ -33,9 +33,7 @@ const Navbar = ({ activeRoute }) => {
             <h1 className=' text-5xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
 
             <ul className="hidden xl:flex flex-row gap-8 text-dark-heavy text-2xl">
-                {siteRoutes.map((i) => {
-                    <li>{i}</li>
-                })}
+                {renderRoutes()}
             </ul>
 
             <TextField placeholder="Search..." />
