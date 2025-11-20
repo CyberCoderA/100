@@ -20,12 +20,10 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         return siteRoutes.map((i) => {
             console.log(formatRouteToText(i));
-            console.log(activeRoute);
-            console.log(i == activeRoute);
             if (i == activeRoute) {
-                <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {
-                <Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{formatRouteToText(i)}</li></Link>
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer'>{formatRouteToText(i)}</li></Link>);
             }
         })
     }
