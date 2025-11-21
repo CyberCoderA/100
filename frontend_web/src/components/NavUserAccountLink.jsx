@@ -20,7 +20,9 @@ const NavUserAccountLink = () => {
     }
 
     return (
-        {handleIfUserIsLogin()}
+        <>
+            {handleIfUserIsLogin()}
+        </>
     )
 };
 
