@@ -17,7 +17,7 @@ const NavUserAccountLink = () => {
 
     function LoginNavActions() {
         return (
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fuser_1144760&psig=AOvVaw2OBV6_DdhU1LpCoQZORLMg&ust=1763780275449000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKDS9-SfgpEDFQAAAAAdAAAAABAE" alt="account_profile" />
+            <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="account_profile" />
         );
     }
 
