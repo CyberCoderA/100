@@ -20,7 +20,7 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         return siteRoutes.map((i) => {
             if (i == activeRoute) {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer  xl:text-4xl font-bold'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer xl:text-4xl font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {
                 return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-3xl cursor-pointer'>{formatRouteToText(i)}</li></Link>);
             }
@@ -32,10 +32,10 @@ const Navbar = ({ activeRoute }) => {
             <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer xl:text-6xl'>100</h1>
 
             <ul className="hidden xl:flex flex-row items-center gap-8 text-dark-heavy text-2xl h-20">
-                {renderRoutes}
+                {renderRoutes()}
             </ul>
 
-            {handleMenuFunction}
+            {handleMenuFunction()}
 
             {/* Navigation drawer */}
             <ul className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "hidden"}`}
