@@ -32,21 +32,19 @@ const Navbar = ({ activeRoute }) => {
             <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer xl:text-6xl'>100</h1>
 
             <ul className="hidden xl:flex flex-row items-center gap-8 text-dark-heavy text-2xl h-20">
-                {renderRoutes()}
+                {renderRoutes}
             </ul>
 
-            <TextField placeholder="Search..." />
-            {handleMenuFunction()}
+            {handleMenuFunction}
 
             {/* Navigation drawer */}
-            <div className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "hidden"}`}
+            <ul className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "hidden"}`}
                 style={{ transition: "transform 0.3s ease, opacity 0.3 ease" }}>
                 <Link to={"/"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer font-bold'>Home</li></Link>
                 <Link to={"/explore"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>Explore</li></Link>
                 <Link to={"/about"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>About</li></Link>
                 <Link to={"/contact"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>Contact</li></Link>
-                <li className='list-none w-full flex justify-center pb-5'><TextField placeholder="Search..." /></li>
-            </div>
+            </ul>
         </div>
     )
 };
