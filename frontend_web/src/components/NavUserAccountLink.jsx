@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 const NavUserAccountLink = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     function NotLoginNavActions() {
         return (
