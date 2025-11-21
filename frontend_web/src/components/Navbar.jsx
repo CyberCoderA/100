@@ -20,9 +20,9 @@ const Navbar = ({ activeRoute }) => {
     function renderRoutes() {
         return siteRoutes.map((i) => {
             if (i == activeRoute) {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer xl:text-3xl font-bold'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={i}><li className='p-2 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer xl:text-4xl font-bold'>{formatRouteToText(i)}</li></Link>);
             } else {
-                return (<Link to={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-2xl cursor-pointer'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={i}><li className='p-2 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-3xl cursor-pointer'>{formatRouteToText(i)}</li></Link>);
             }
         })
     }
@@ -31,7 +31,7 @@ const Navbar = ({ activeRoute }) => {
         <div className="bg-primary-heavy p-5 h-40 flex items-center justify-between drop-shadow-md">
             <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer xl:text-6xl'>100</h1>
 
-            <ul className="hidden xl:flex flex-row items-center gap-8 text-dark-heavy text-2xl h-full">
+            <ul className="hidden xl:flex flex-row items-center gap-6 text-dark-heavy text-2xl h-full">
                 {renderRoutes()}
             </ul>
 
