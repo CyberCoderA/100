@@ -17,9 +17,9 @@ const NavUserAccountLink = () => {
 
     function LoginNavActions() {
         return (
-            <div>
+            <div className="flex flex-row gap-4">
                 <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" className="h-20" alt="account_profile" />
-                <h1 className="flex flex-row gap-4">User</h1>
+                <h1 className="text-xl font-bold text-dark-heavy">User</h1>
             </div>
         );
     }
