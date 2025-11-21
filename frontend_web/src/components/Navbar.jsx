@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import TextField from '../components/TextField';
+import NavUserAccountLink from '../components/NavUserAccountLink';
 import '../App.css';
 
 const Navbar = ({ activeRoute }) => {
@@ -34,6 +34,8 @@ const Navbar = ({ activeRoute }) => {
             <ul className="hidden xl:flex flex-row items-center gap-8 text-dark-heavy text-2xl h-20">
                 {renderRoutes()}
             </ul>
+
+            <NavUserAccountLink />
 
             {handleMenuFunction()}
 
