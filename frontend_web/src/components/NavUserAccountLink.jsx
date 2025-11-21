@@ -22,7 +22,7 @@ const NavUserAccountLink = () => {
     }
 
     function handleIfUserIsLogin() {
-        return isLoggedIn ? LoginNavActions : NotLoginNavActions;
+        return isLoggedIn ? LoginNavActions() : NotLoginNavActions();
     }
 
     return (
