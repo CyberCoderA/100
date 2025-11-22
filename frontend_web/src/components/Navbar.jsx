@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import NavUserAccountLink from './NavUserAccountLink.jsx';
 import '../App.css';
 
-const Navbar = ({ activeRoute }) => {
+const Navbar = ({ activeRoute, isLoggedIn }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const siteRoutes = ["/", "/explore", "/about", "/contact"];
 
@@ -18,37 +18,43 @@ const Navbar = ({ activeRoute }) => {
     }
 
     function renderRoutes() {
-        return siteRoutes.map((i) => {
-            if (i == activeRoute) {
-                return (<Link to={i}><li className='p-2 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer xl:text-4xl font-bold'>{formatRouteToText(i)}</li></Link>);
+        return siteRoutes.map((route, i) => {
+            if (route == activeRoute) {
+                return (<Link to={route} key={i}><li className='p-4 hover:bg-gray-600 hover:text-white rounded-md transition-all cursor-pointer xl:text-4xl font-bold'>{formatRouteToText(route)}</li></Link>);
             } else {
-                return (<Link to={i}><li className='p-2 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-3xl cursor-pointer'>{formatRouteToText(i)}</li></Link>);
+                return (<Link to={route} key={i}><li className='p-4 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-3xl cursor-pointer'>{formatRouteToText(route)}</li></Link>);
             }
-        })
+        });
+    }
+
+    function renderMobileRoutes() {
+        return siteRoutes.map((route, i) => {
+            if (i == activeRoute) {
+                return <Link to={route} key={i}><li className='w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer font-bold'>{formatRouteToText(route)}</li></Link>
+            } else {
+                return <Link to={route} key={i}><li className='w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>{formatRouteToText(route)}</li></Link>
+            }
+        });
     }
 
     return (
-        <div className="bg-primary-heavy p-5 h-40 flex items-center justify-between drop-shadow-md">
-            <h1 className='text-xl font-bold text-dark-heavy hover:cursor-pointer xl:text-6xl'>100</h1>
+        <div className="bg-primary-heavy p-5 h-24 xl:h-32 flex items-center justify-between drop-shadow-md fixed top-0 left-0 w-full z-50 overflow-hidden">
+            <h1 className='text-3xl xl:text-5xl font-bold text-dark-heavy hover:cursor-pointer'>100</h1>
 
-            <ul className="hidden xl:flex flex-row items-center gap-6 text-dark-heavy text-2xl h-full">
+            <ul className="hidden xl:flex flex-row items-center gap-6 text-dark-heavy text-xl xl:text-2xl h-full">
                 {renderRoutes()}
             </ul>
 
-            <NavUserAccountLink />
+            <NavUserAccountLink isLoggedIn={isLoggedIn} activeRoute={activeRoute} />
 
             {handleMenuFunction()}
 
             {/* Navigation drawer */}
-            <ul className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "hidden"}`}
-                style={{ transition: "transform 0.3s ease, opacity 0.3 ease" }}>
-                <Link to={"/"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer font-bold'>Home</li></Link>
-                <Link to={"/explore"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>Explore</li></Link>
-                <Link to={"/about"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>About</li></Link>
-                <Link to={"/contact"}><li className='list-none w-full text-center p-4 hover:bg-gray-600 hover:text-white transition-all cursor-pointer'>Contact</li></Link>
+            <ul className={`absolute xl:hidden top-24 left-0 w-full bg-primary-heavy flex flex-col items-center gap-6 font-semibold text-lg transition-opacity duration-300 ease-in-out ${isMenuOpen ? "opacity-100" : "hidden"}`}>
+                {renderMobileRoutes()}
             </ul>
         </div>
-    )
+    );
 };
 
 export default Navbar;

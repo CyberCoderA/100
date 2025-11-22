@@ -1,13 +1,14 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import Navbar from '../components/Navbar';
+import { useState } from 'react';
 
 const Home = () => {
+    const [isLoggedIn, setisLoggedIn] = useState(false);
 
     return (
         <div className="h-screen flex flex-col">
-            <Navbar activeRoute="/"/>
+            <Navbar activeRoute="/" isLoggedIn={isLoggedIn}/>
 
             <div className='background-img flex justify-center items-center'>
                 <div className=' flex flex-col items-center text-center'>

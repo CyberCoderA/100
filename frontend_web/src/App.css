@@ -3,3 +3,8 @@
   background-size: cover;
   height: 100%;
 }
+
+.developer-img {
+  background: url("./assets/ID.png");
+  background-size: cover;
+}
