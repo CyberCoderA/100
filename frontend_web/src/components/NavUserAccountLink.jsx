@@ -13,13 +13,13 @@ const NavUserAccountLink = ({ isLoggedIn, activeRoute }) => {
         return navRoutes.map((route, i) => {
             if(route == activeRoute) {
                 return <Link to={route} key={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-3xl cursor-pointer font-bold'>{formatRouteToText(route)}</li></Link>
-            } else if(i == navRoutes.length - 1) {
+            } else {
                 return (
                     <>
-                        <h1 className='text-4xl font-bold'>|</h1>
+                        {i == navRoutes.length / 2 ? <h1 className='text-4xl font-bold'>|</h1> : ''}
                         <Link to={route} key={i}><li className='p-3 hover:bg-gray-600 hover:text-white rounded-md transition-all xl:text-3xl cursor-pointer'>{formatRouteToText(route)}</li></Link>
                     </>
-                );
+                )
             }
         })
     }
