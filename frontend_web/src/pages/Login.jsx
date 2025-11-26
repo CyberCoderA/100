@@ -9,7 +9,7 @@ const Login = () => {
     const [isLoggedIn, setisLoggedIn] = useState(false);
 
     return (
-        <div className='h-screen flex flex-col'>
+        <div className='h-[80%] max-h-[1000px] flex flex-col justify-center backdrop-blur-lg bg-white rounded-lg w-11/12 max-w-96 lg:max-w-[900px] min-h-[400px] shadow-2xl items-center p-6'>
             <Navbar activeRoute="/login" isLoggedIn={isLoggedIn}/>
 
             {/* Body */}
